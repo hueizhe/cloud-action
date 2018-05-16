@@ -1,12 +1,12 @@
-package com.cloud.cloudall;
+package com.cloud.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CloudAllApplication {
+public class EurekaServerApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CloudAllApplication.class, args);
+		SpringApplication.run(EurekaServerApplication.class, args);
 	}
 }

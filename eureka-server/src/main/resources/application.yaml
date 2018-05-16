@@ -1,0 +1,4 @@
+server.port=1000
+
+eureka.instance.hostname=localhost
+eureka.client.registper-with-eureka=false
