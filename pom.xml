@@ -25,6 +25,7 @@
 		<module>actuator-service</module>
 		<module>hystrix-dashboard</module>
 		<module>feign-consumer</module>
+		<module>zipkin-server</module>
 	</modules>
 
 	<properties>
