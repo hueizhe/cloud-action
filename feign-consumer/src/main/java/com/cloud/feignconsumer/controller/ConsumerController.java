@@ -1,20 +1,21 @@
-package com.cloud.ribbonconsumer.Controller;
+package com.cloud.feignconsumer.controller;
 
-import com.cloud.ribbonconsumer.service.HelloService;
+
+import com.cloud.feignconsumer.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 public class ConsumerController {
-
 
     @Autowired
     private HelloService helloService;
 
-    @RequestMapping("/ribbon-consumer")
+    @RequestMapping("/feign-consumer")
     public String helloConsumer(){
-        return helloService.helloService();
+        return helloService.hello();
     }
+
+
 }
