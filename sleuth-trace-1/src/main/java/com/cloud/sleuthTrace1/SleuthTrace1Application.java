@@ -14,15 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 public class SleuthTrace1Application {
 
-
-
 	private final Logger logger = LoggerFactory.getLogger(SleuthTrace1Application.class);
-
-	@GetMapping("/trace-1")
-	public String trace(){
-		logger.info("------------------<call    trace-1>-------------------");
-		return "Trace";
-	}
 
 	public static void main(String[] args) {
 		SpringApplication.run(SleuthTrace1Application.class, args);

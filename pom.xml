@@ -25,7 +25,6 @@
 		<module>actuator-service</module>
 		<module>hystrix-dashboard</module>
 		<module>feign-consumer</module>
-		<module>zipkin-server</module>
 		<module>sleuth-trace-1</module>
 		<module>sleuth-trace-2</module>
 	</modules>
