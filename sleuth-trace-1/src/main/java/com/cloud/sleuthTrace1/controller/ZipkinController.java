@@ -1,14 +1,19 @@
 package com.cloud.sleuthTrace1.controller;
 
-import com.netflix.ribbon.proxy.annotation.Http;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
-import org.springframework.core.ParameterizedTypeReference;
+
+import org.springframework.http.HttpMethod;
+import org.springframework.http.RequestEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+
+@RestController
 public class ZipkinController {
 
 
@@ -22,18 +27,18 @@ public class ZipkinController {
 
     private static final Logger LOG = LoggerFactory.getLogger(ZipkinController.class);
 
-    @GetMapping(value="/zipkin2")
+    @GetMapping(value="/zipkin1")
     public String zipkinService1() {
         LOG.info("Inside zipkinService 2..");
         LOG.info("Now let's create some intentional delay...");
+
         try {
             Thread.sleep(20 * 1000);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         LOG.info("returning afte delay..");
-
+ //       restTemplate.getForObject("http://localhost:20002/zipkin2", String.class);
         return "Hi...";
     }
 
