@@ -27,6 +27,8 @@
 		<module>feign-consumer</module>
 		<module>sleuth-trace-1</module>
 		<module>sleuth-trace-2</module>
+		<module>cloud-turbine</module>
+		<module>cloud-zuul</module>
 	</modules>
 
 	<properties>
