@@ -25,3 +25,4 @@ management:
 logging:
   level:
     com.cloud : debug
+    org.springframework.web.servlet.DispatcherServlet: DEBUG

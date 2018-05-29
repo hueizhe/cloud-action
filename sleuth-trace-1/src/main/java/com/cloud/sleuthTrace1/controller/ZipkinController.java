@@ -38,7 +38,7 @@ public class ZipkinController {
             e.printStackTrace();
         }
         LOG.info("returning afte delay..");
- //       restTemplate.getForObject("http://localhost:20002/zipkin2", String.class);
+        restTemplate.getForObject("http://localhost:20002/zipkin2", String.class);
         return "Hi...";
     }
 
