@@ -33,11 +33,7 @@ public class TraceController {
         logger.info("Inside zipkinService 2..");
         logger.info("Now let's create some intentional delay...");
 
-        try {
-            Thread.sleep(20 * 1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
         logger.info("returning afte delay..");
         restTemplate.getForObject("http://localhost:20001/zipkin1", String.class);
         return "Hi...  zipkin2";

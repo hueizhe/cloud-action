@@ -1,0 +1,24 @@
+
+
+spring:
+  application:
+    name: trace-1
+  boot:
+    admin:
+      client:
+        url: http://localhost:9000
+  zipkin:
+    base-url: http://47.104.65.225:9411
+server:
+  port: 20001
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:10000/eureka
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
