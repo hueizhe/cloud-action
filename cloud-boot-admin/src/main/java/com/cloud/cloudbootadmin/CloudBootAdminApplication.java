@@ -5,13 +5,13 @@ import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 
 @Configurable
 @EnableAdminServer
-@EnableDiscoveryClient
-@SpringBootApplication
+@SpringCloudApplication
 @EnableAutoConfiguration
 public class CloudBootAdminApplication {
 

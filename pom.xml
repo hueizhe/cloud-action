@@ -29,6 +29,7 @@
 		<module>sleuth-trace-2</module>
 		<module>cloud-turbine</module>
 		<module>cloud-zuul</module>
+		<module>cloud-rabbitmq</module>
 	</modules>
 
 	<properties>

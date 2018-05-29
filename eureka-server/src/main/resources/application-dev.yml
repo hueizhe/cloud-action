@@ -6,10 +6,7 @@ spring:
   profiles: development
   application:
     name: eureka-service
-  boot:
-    admin:
-      client:
-        url: http://localhost:9000
+
 
 server:
   port: 1000
