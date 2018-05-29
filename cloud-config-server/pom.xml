@@ -4,34 +4,18 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.cloud</groupId>
-	<artifactId>cloud-action</artifactId>
+	<artifactId>cloud-config-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>pom</packaging>
+	<packaging>jar</packaging>
 
-	<name>cloud-action</name>
+	<name>cloud-config-server</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.2.RELEASE</version>
-		<relativePath/>
+		<groupId>com.cloud</groupId>
+		<artifactId>cloud-action</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-
-	<modules>
-		<module>eureka-server</module>
-		<module>hello-service</module>
-		<module>ribbon-consumer</module>
-		<module>cloud-boot-admin</module>
-		<module>hystrix-dashboard</module>
-		<module>feign-consumer</module>
-		<module>sleuth-trace-1</module>
-		<module>sleuth-trace-2</module>
-		<module>cloud-turbine</module>
-		<module>cloud-zuul</module>
-		<module>cloud-rabbitmq</module>
-		<module>cloud-config-server</module>
-	</modules>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,7 +27,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+			<artifactId>spring-cloud-config-server</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
 		</dependency>
 
 		<dependency>
@@ -90,11 +78,6 @@
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>
-		</repository>
-		<repository>
-			<id>aliyun-maven</id>
-			<name>aliyun-maven</name>
-			<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
 		</repository>
 	</repositories>
 
