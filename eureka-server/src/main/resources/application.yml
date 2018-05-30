@@ -8,7 +8,6 @@ server:
 eureka:
   instance:
     hostname: 127.0.0.1
-    prefer-ip-address: true
   client:
     fetch-registry: true
     register-with-eureka: true
@@ -16,6 +15,8 @@ eureka:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
   server:
     enable-self-preservation: true
+
+
 management:
   endpoints:
     web:
