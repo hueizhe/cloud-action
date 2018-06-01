@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
 
 
-    @ApiOperation(value = "/getUserList", notes = "查询用户列表", httpMethod = "get")
+    @ApiOperation(value = "/getUserList", notes = "查询用户列表", httpMethod = "GET")
     @GetMapping("/getUserList")
     public String userList(@ApiParam(name="id",value = "id",required = true)String id){
 
