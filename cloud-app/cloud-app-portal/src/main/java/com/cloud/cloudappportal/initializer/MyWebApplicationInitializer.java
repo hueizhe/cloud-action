@@ -1,6 +1,7 @@
 package com.cloud.cloudappportal.initializer;
 
 import com.cloud.cloudappportal.config.RootConfig;
+import com.cloud.cloudappportal.config.Swagger2Config;
 import com.cloud.cloudappportal.config.WebConfig;
 import org.springframework.lang.Nullable;
 import org.springframework.web.filter.CharacterEncodingFilter;
@@ -13,7 +14,7 @@ public class MyWebApplicationInitializer extends AbstractAnnotationConfigDispatc
     @Nullable
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{ RootConfig.class };
+        return new Class[]{ RootConfig.class, Swagger2Config.class };
     }
 
     @Nullable
