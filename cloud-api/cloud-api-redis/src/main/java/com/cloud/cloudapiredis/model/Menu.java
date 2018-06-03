@@ -1,4 +1,4 @@
-package com.cloud.cloudapiredis.dao;
+package com.cloud.cloudapiredis.model;
 
 import java.util.ConcurrentModificationException;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package me.aboullaite.controller;
+package com.cloud.cloudapiredis.controller;
 
 import com.cloud.cloudapiredis.model.User;
 import com.cloud.cloudapiredis.service.UserService;

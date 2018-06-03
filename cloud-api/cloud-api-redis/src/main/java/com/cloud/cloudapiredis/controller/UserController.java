@@ -1,18 +1,14 @@
-package me.aboullaite.controller;
+package com.cloud.cloudapiredis.controller;
 
 import java.util.Date;
 
 import javax.servlet.ServletException;
 
+import com.cloud.cloudapiredis.model.User;
+import com.cloud.cloudapiredis.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
-import me.aboullaite.model.User;
-import me.aboullaite.service.UserService;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -25,12 +21,12 @@ public class UserController {
 	@Autowired
 	private UserService userService;
 
-	@RequestMapping(value = "/register", method = RequestMethod.POST)
+	@PostMapping(value = "/register")
 	public User registerUser(@RequestBody User user) {
 		return userService.save(user);
 	}
 
-	@RequestMapping(value = "/login", method = RequestMethod.POST)
+	@PostMapping(value = "/login")
 	public String login(@RequestBody User login) throws ServletException {
 
 		String jwtToken = "";
