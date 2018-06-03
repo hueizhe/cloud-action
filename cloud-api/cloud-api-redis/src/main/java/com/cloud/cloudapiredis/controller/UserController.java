@@ -22,12 +22,15 @@ public class UserController {
 	private UserService userService;
 
 	@PostMapping(value = "/register")
-	public User registerUser(@RequestBody User user) {
+	public User registerUser(String email,String password) {
+		User user = new User();
+		user.setEmail(email);
+		user.setPassword(password);
 		return userService.save(user);
 	}
 
 	@PostMapping(value = "/login")
-	public String login(@RequestBody User login) throws ServletException {
+	public String login( User login) throws ServletException {
 
 		String jwtToken = "";
 

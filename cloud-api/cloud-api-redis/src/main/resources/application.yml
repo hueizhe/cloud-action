@@ -3,8 +3,13 @@ spring:
     url: jdbc:mysql://localhost:3306/spring?useSSL=false
     username: root
     password: root
+    hikari:
+      minimum-idle: 8
+      auto-commit: true
+      maximum-pool-size: 2
   jpa:
     show-sql: true
+    open-in-view: true
     hibernate:
       ddl-auto: create-drop
       naming:
@@ -12,13 +17,28 @@ spring:
     properties:
       hibernate:
         dialect:  org.hibernate.dialect.MySQL5Dialect
+        format_sql : true
+
   application:
     name: api-redis
+  http:
+    encoding:
+      charset: utf-8
+      force: true
+      enabled: true
+
 server:
   port: 8889
+  tomcat:
+    uri-encoding: UTF-8
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url:
       defaultZone: http://127.0.0.1:10000/eureka
+logging:
+  level:
+    org.hibernate.SQL : debug
+    org.hibernate.type.descriptor.sql.BasicBinder : TRACE
+
