@@ -9,6 +9,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.AssertTrue;
 
 @Entity
 public class User {
@@ -23,6 +24,18 @@ public class User {
 
 	@CreationTimestamp
 	private Date created;
+
+
+	/**
+	 * Custom validations
+	 * @param inputPassword
+	 * @return
+	 */
+	@AssertTrue(message = "password field is not match")
+	private boolean isValid(String inputPassword){
+		return this.password.equals(inputPassword);
+	}
+
 
 	public Long getUserId() {
 		return userId;
